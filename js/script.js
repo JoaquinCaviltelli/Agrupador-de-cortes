@@ -82,7 +82,7 @@ function groupCuts() {
     if (fileCut[i][0] <= maxWidth) {
       groupCut.push(fileCut[i]);
       maxWidth -= fileCut[i][0];
-      if (maxWidth > 0) {
+      if (maxWidth > thickness) {
         maxWidth -= thickness;
       }
       spliceCut.push(i);

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizador de cortes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- cdn fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Read excel -->
+    <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="data-container">
+            <form action="">
+                <h2>Datos</h2>
+                <div class="form-group">
+                    <label for="">
+                        Largo total (mm)
+                    </label>
+                    <input id="inputMaxWidth" type="number" value="6000">
+                </div>
+                <div class="form-group">
+                    <label for="">
+                        Espesor (mm)
+                    </label>
+                    <input id="inputThickness" type="number" value="0.5">
+                </div>
+                <div class="form-group">
+                    <label id="labelFile" class="label-file" for="file">
+                        Ingrese archivo
+                        <img src="icons/upload.svg" alt="">
+                    </label>
+                    <input id="file" type="file" accept=".xlsx, xls, xml">
+                </div>
+                <button id="btnLoad">Cargar</button>
+            </form>
+        </div>
+        <div class="result-container">
+            <div class="title">
+                <h1>Optimizador de cortes</h1>
+            </div>
+            <div class="cards" id="cardResult">
+                <div class="text-info">
+
+                    <p>Se debe exportar un archivo en formato .xlsx o .xls (excel) con los siguientes parametros:</p>
+                    <p>El la columna <b>A</b> la cantidad de cortes</p>
+                    <p>El la columna <b>B</b> la longitud de corte en mm</p>
+                    <p>El la columna <b>C</b> una descripcion (opcional)</p>
+                    <br>
+                    <img src="img/Group 134.svg" alt="">
+
+                </div>
+                <!-- insert from javascript -->
+            </div>
+            <div id="result" class="result">
+                <table id="table">
+                    <!-- insert from javascript -->
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

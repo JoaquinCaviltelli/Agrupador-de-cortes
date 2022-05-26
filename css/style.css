@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,600,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f7f9ff;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  min-height: 100vh;
+}
+
+.container .data-container {
+  background: #666666;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  color: #ffffff;
+  padding: 40px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .container .data-container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+  }
+}
+
+.container .data-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #ffffff;
+  width: 100%;
+  gap: 15px;
+  max-width: 400px;
+  font-size: 1em;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .container .data-container form {
+    font-size: 0.9em;
+  }
+}
+
+.container .data-container form h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.container .data-container form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.container .data-container form input,
+.container .data-container form button {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  color: #666666;
+  background: #fff;
+  border: none;
+  outline: none;
+}
+
+.container .data-container form input[type="file"] {
+  display: none;
+}
+
+.container .data-container form .label-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  border-radius: 6px;
+  background: #fff;
+  color: #666666;
+  cursor: pointer;
+  padding: 16px;
+  margin-top: 15px;
+}
+
+.container .data-container form .label-file img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container .data-container form .label-file:hover img {
+  -webkit-animation: scale 0.6s infinite alternate ease-in-out;
+          animation: scale 0.6s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.container .data-container form button {
+  background: #628dfb;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+
+.container .data-container form button:hover {
+  background: #396ef4;
+}
+
+.container .result-container {
+  background: #f7f9ff;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 9;
+  grid-column: 4/13;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .container .result-container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+  }
+}
+
+.container .result-container .title {
+  font-size: 42px;
+}
+
+.container .result-container .title h1 {
+  font-size: 1em;
+  color: #666666;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .container .result-container .title h1 {
+    font-size: 0.8em;
+  }
+}
+
+.container .result-container .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.container .result-container .cards .text-info {
+  color: #666666;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.container .result-container .cards .card {
+  background: #fff;
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 6px;
+  font-size: 16px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container .result-container .cards .card h5 {
+  font-size: 1em;
+  color: #666666;
+  font-weight: 200;
+}
+
+.container .result-container .cards .card p {
+  font-size: 1.5em;
+  color: #628dfb;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .container .result-container .cards .card {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container .result-container .cards .card {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+  }
+}
+
+.container .result-container .result h5 {
+  font-size: 1em;
+  color: #666666;
+  font-weight: 600;
+}
+
+.container .result-container .result p {
+  color: #666666;
+  font-weight: 400;
+}
+
+.container .result-container .result button {
+  background: #628dfb;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  margin-top: 15px;
+  float: right;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container .result-container .result button:hover {
+  background: #396ef4;
+}
+
+.container .result-container .result table {
+  width: 100%;
+  background: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 16px;
+  color: #666666;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .container .result-container .result table {
+    font-size: 14px;
+  }
+}
+
+.container .result-container .result table thead {
+  background: #628dfb;
+  color: #ffffff;
+}
+
+.container .result-container .result table thead tr th {
+  font-weight: 600;
+  padding: 10px;
+  text-align: left;
+}
+
+.container .result-container .result table tbody tr td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #f7f9ff;
+  font-weight: 400;
+}
+
+.container .result-container .result table tbody tr td .graph {
+  width: 100%;
+  height: 10px;
+  background: #628dfb;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
+  grid-column: 3/7;
+}
+
+.container .result-container .result table tbody tr td .graph .graph-bar {
+  width: 30%;
+  height: 100%;
+  background: #666666;
+}
+
+.container .result-container .result table tbody tr td:nth-child(3) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[6];
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
